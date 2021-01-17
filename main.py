@@ -17,8 +17,8 @@ async def on_ready():
 async def on_member_join(member: discord.Member):
     WelcomeChannel = bot.get_channel(695299156222279802)
     Community = discord.utils.get(member.guild.roles, id=int("695268457217917100"))
-    await WelcomeChannel.send(f"{member.mention}! Welcome To {member.guild.name}! Please don't be a 𝒟𝐼𝒞𝒦 🤬 🙃 ")
-    # await WelcomeChannel.send(f"{member.mention}! Welcome To {member.guild.name}! Please don't be a 𝒟𝐼𝒞𝒦 🤬 🙃 ")
+    await WelcomeChannel.send(f"{member.mention}! Welcome To {member.guild.name}! Please don't be BAD 🤬 🙃 ")
+    # await WelcomeChannel.send(f"{member.mention}! Welcome To {member.guild.name}! Please don't be a BAD 🤬 🙃 ")
     await member.add_roles(Community)
     # for guild in bot.guilds:
     #     for member in guild.members:
@@ -30,7 +30,7 @@ async def on_member_join(member: discord.Member):
 @bot.event
 async def on_member_remove(member: discord.Member):
     ByeChannel = bot.get_channel(701890864103817276)
-    await ByeChannel.send(f"{member.mention} Left 😰! Have a good time in heaven 😇!!Fucker 🤬")
+    await ByeChannel.send(f"{member.mention} Left 😰! Have a good time in heaven 😇!!")
     # for guild in bot.guilds:
     #     for member in guild.members:
     #         MembersChannel = bot.get_channel(722574979639803924)
@@ -245,7 +245,7 @@ async def mod(ctx, member : discord.Member = None):
 @bot.event
 async def on_message(message):
     HeyRyo = ['hey ryo', 'Hey Ryo', 'HEY RYO', 'Hey ryo', 'hey Ryo']
-    BadWords = ['nigga', 'NIGGA', 'Nigga', 'Retard', 'retard', 'Retard', 'autistic', 'Autistic', 'AUTISTIC']
+    BadWords = ['YOUR BAD WORDS HERE']
 
 
     if message.content.lower() in BadWords:
@@ -265,7 +265,7 @@ async def on_message(message):
             color = discord.Color.dark_blue()     
             ) 
             embed.set_thumbnail(url="https://i.imgur.com/AcoMCmN.png")
-            embed.add_field(name="‎‏‏‎ ‎", value='‏‏‎Hello there i saw that you talked about me in your messages. If you need me to help you type /help in chat and that you are gay :)', inline=False)
+            embed.add_field(name="‎‏‏‎ ‎", value='‏‏‎Hello there i saw that you talked about me in your messages. If you need me to help you type /help in chat :)', inline=False)
             await message.channel.send(embed=embed)
             return
     await bot.process_commands(message)
@@ -281,7 +281,7 @@ async def warn(ctx, member: discord.Member = None):
         title = f"WARN BAN"
         )  
         embed.set_thumbnail(url="https://i.imgur.com/3YmKdIu.png")
-        embed.add_field(name='Warn Ban', value="You have been warned for beeing a asshole or a retard and if you get 3 warning you get perm banned from the server", inline=True)
+        embed.add_field(name='Warn Ban', value="You have been warned for beeing a asshole and if you get 3 warning you get perm banned from the server", inline=True)
         await member.send(embed=embed)   
         await bot.get_all_members
 
